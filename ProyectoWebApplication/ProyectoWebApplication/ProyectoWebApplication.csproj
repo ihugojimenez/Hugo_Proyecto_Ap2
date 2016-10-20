@@ -167,6 +167,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlmacenBancasDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlmacenBancasDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -203,6 +208,17 @@
     <Content Include="less\agency.less" />
     <Content Include="less\mixins.less" />
     <Content Include="less\variables.less" />
+    <Content Include="AlmacenBancasDataSet.xsc">
+      <DependentUpon>AlmacenBancasDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="AlmacenBancasDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AlmacenBancasDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="AlmacenBancasDataSet.xss">
+      <DependentUpon>AlmacenBancasDataSet.xsd</DependentUpon>
+    </Content>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
