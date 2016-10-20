@@ -23,9 +23,59 @@ namespace ProyectoWebApplication
             }
         }
 
+        protected void Limpiar()
+        {
+            UserNameTextBox.Text = "";
+            NameTextBox.Text = "";
+            PassTextBox.Text = "";
+            RpassTextBox.Text = "";
+            TipoDropDownList.SelectedIndex = 1;
+        }
+
         protected void NewButton_Click(object sender, EventArgs e)
         {
+            Limpiar();
+        }
 
+        protected void LLenarClase(Usuarios u)
+        {
+            u.NombreUsuario = UserNameTextBox.Text;
+            u.Nombres = NameTextBox.Text;
+            u.Contraseña = PassTextBox.Text;
+            u.IdTipo = int.Parse(TipoDropDownList.SelectedValue);
+        }
+
+        protected void LLenarCampos(Usuarios u)
+        {
+            NameTextBox.Text = u.Nombres;
+            UserNameTextBox.Text = u.NombreUsuario;
+            PassTextBox.Text = u.Contraseña;
+            RpassTextBox.Text = u.Contraseña;
+            TipoDropDownList.SelectedIndex = u.IdTipo;
+        }
+
+        protected void SaveButton_Click(object sender, EventArgs e)
+        {
+            Usuarios usuario = new Usuarios();
+            LLenarClase(usuario);
+            usuario.Insertar();
+            Limpiar();
+        }
+
+        protected void DeleteButton_Click(object sender, EventArgs e)
+        {
+            Usuarios usuario = new Usuarios();
+            usuario.Usuarioid = Convert.ToInt32(IdTextBox.Text);
+            usuario.Eliminar();
+            Limpiar();
+        }
+
+        protected void SearchButton_Click(object sender, EventArgs e)
+        {
+            Usuarios u = new Usuarios();
+            u.Buscar(Convert.ToInt32(IdTextBox.Text));
+            LLenarCampos(u);
+            
         }
     }
 }

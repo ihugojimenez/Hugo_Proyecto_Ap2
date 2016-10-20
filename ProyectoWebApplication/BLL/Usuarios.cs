@@ -40,7 +40,18 @@ namespace BLL
 
         public override bool Eliminar()
         {
-            throw new NotImplementedException();
+            ConexionDb conexion = new ConexionDb();
+            bool retorno = false;
+            try
+            {
+                retorno = conexion.Ejecutar(string.Format("delete from Usuarios where UsuarioId= {0} ", this.Usuarioid));
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            return retorno;
         }
 
         public override bool Insertar()
@@ -62,7 +73,11 @@ namespace BLL
 
         public override DataTable Listado(string Campos, string Condicion, string Orden)
         {
-            throw new NotImplementedException();
+            ConexionDb conexion = new ConexionDb();
+            string ordenFinal = "";
+            if (!Orden.Equals(""))
+                ordenFinal = " order by  " + Orden;
+            return conexion.ObtenerDatos(string.Format("select " + Campos + " from Usuarios where " + Condicion + ordenFinal));
         }
     }
 }
