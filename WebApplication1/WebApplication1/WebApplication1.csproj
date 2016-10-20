@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{62DC9136-7907-4C83-BE21-E4B749E29ED0}</ProjectGuid>
+    <ProjectGuid>{E6CF2713-87B5-4BF6-8D80-AB8600115F37}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ProyectoWebApplication</RootNamespace>
-    <AssemblyName>ProyectoWebApplication</AssemblyName>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -115,154 +115,24 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\agency.css" />
-    <Content Include="css\agency.min.css" />
-    <Content Include="Default.aspx" />
-    <Content Include="Imagenes\fondo.png" />
-    <Content Include="img\about\1.jpg" />
-    <Content Include="img\about\2.jpg" />
-    <Content Include="img\about\3.jpg" />
-    <Content Include="img\about\4.jpg" />
-    <Content Include="img\fondo.jpg" />
-    <Content Include="img\logos\aetuts.jpg" />
-    <Content Include="img\logos\creative-market.jpg" />
-    <Content Include="img\logos\designmodo.jpg" />
-    <Content Include="img\logos\envato.jpg" />
-    <Content Include="img\logos\microlancer.jpg" />
-    <Content Include="img\logos\themeforest.jpg" />
-    <Content Include="img\logos\wordpress.jpg" />
-    <Content Include="img\map-image.png" />
-    <Content Include="img\portfolio\dreams-preview.png" />
-    <Content Include="img\portfolio\dreams.png" />
-    <Content Include="img\portfolio\escape-preview.png" />
-    <Content Include="img\portfolio\escape.png" />
-    <Content Include="img\portfolio\golden-preview.png" />
-    <Content Include="img\portfolio\golden.png" />
-    <Content Include="img\portfolio\roundicons-free.png" />
-    <Content Include="img\portfolio\roundicons.png" />
-    <Content Include="img\portfolio\startup-framework-preview.png" />
-    <Content Include="img\portfolio\startup-framework.png" />
-    <Content Include="img\portfolio\treehouse-preview.png" />
-    <Content Include="img\portfolio\treehouse.png" />
-    <Content Include="img\team\1.jpg" />
-    <Content Include="img\team\2.jpg" />
-    <Content Include="img\team\3.jpg" />
-    <Content Include="js\agency.js" />
-    <Content Include="js\agency.min.js" />
-    <Content Include="js\contact_me.js" />
-    <Content Include="js\jqBootstrapValidation.js" />
-    <Content Include="Registros\RegistroUsuarios.aspx" />
     <Content Include="scripts\ai.0.22.19-build00125.js" />
     <Content Include="scripts\ai.0.22.19-build00125.min.js" />
-    <Content Include="vendor\bootstrap\css\bootstrap.css" />
-    <Content Include="vendor\bootstrap\css\bootstrap.min.css" />
-    <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="vendor\bootstrap\js\bootstrap.js" />
-    <Content Include="vendor\bootstrap\js\bootstrap.min.js" />
-    <Content Include="vendor\font-awesome\css\font-awesome.css" />
-    <Content Include="vendor\font-awesome\css\font-awesome.min.css" />
-    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.svg" />
-    <Content Include="vendor\jquery\jquery.js" />
-    <Content Include="vendor\jquery\jquery.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-    <Compile Include="Registros\RegistroUsuarios.aspx.cs">
-      <DependentUpon>RegistroUsuarios.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Registros\RegistroUsuarios.aspx.designer.cs">
-      <DependentUpon>RegistroUsuarios.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SiteMaster.Master.cs">
-      <DependentUpon>SiteMaster.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SiteMaster.Master.designer.cs">
-      <DependentUpon>SiteMaster.Master</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="less\agency.less" />
-    <Content Include="less\mixins.less" />
-    <Content Include="less\variables.less" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="SiteMaster.Master" />
-    <Content Include="scss\agency.scss" />
-    <Content Include="scss\_mixins.scss" />
-    <Content Include="scss\_variables.scss" />
-    <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.eot" />
-    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
-    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.woff" />
-    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
-    <Content Include="vendor\font-awesome\fonts\FontAwesome.otf" />
-    <Content Include="vendor\font-awesome\less\animated.less" />
-    <Content Include="vendor\font-awesome\less\bordered-pulled.less" />
-    <Content Include="vendor\font-awesome\less\core.less" />
-    <Content Include="vendor\font-awesome\less\fixed-width.less" />
-    <Content Include="vendor\font-awesome\less\font-awesome.less" />
-    <Content Include="vendor\font-awesome\less\icons.less" />
-    <Content Include="vendor\font-awesome\less\larger.less" />
-    <Content Include="vendor\font-awesome\less\list.less" />
-    <Content Include="vendor\font-awesome\less\mixins.less" />
-    <Content Include="vendor\font-awesome\less\path.less" />
-    <Content Include="vendor\font-awesome\less\rotated-flipped.less" />
-    <Content Include="vendor\font-awesome\less\screen-reader.less" />
-    <Content Include="vendor\font-awesome\less\stacked.less" />
-    <Content Include="vendor\font-awesome\less\variables.less" />
-    <Content Include="vendor\font-awesome\scss\font-awesome.scss" />
-    <Content Include="vendor\font-awesome\scss\_animated.scss" />
-    <Content Include="vendor\font-awesome\scss\_bordered-pulled.scss" />
-    <Content Include="vendor\font-awesome\scss\_core.scss" />
-    <Content Include="vendor\font-awesome\scss\_fixed-width.scss" />
-    <Content Include="vendor\font-awesome\scss\_icons.scss" />
-    <Content Include="vendor\font-awesome\scss\_larger.scss" />
-    <Content Include="vendor\font-awesome\scss\_list.scss" />
-    <Content Include="vendor\font-awesome\scss\_mixins.scss" />
-    <Content Include="vendor\font-awesome\scss\_path.scss" />
-    <Content Include="vendor\font-awesome\scss\_rotated-flipped.scss" />
-    <Content Include="vendor\font-awesome\scss\_screen-reader.scss" />
-    <Content Include="vendor\font-awesome\scss\_stacked.scss" />
-    <Content Include="vendor\font-awesome\scss\_variables.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BLL\BLL.csproj">
-      <Project>{A0609844-0F6F-474C-BF57-4ACB6E42042B}</Project>
-      <Name>BLL</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Reportes\UsersReport.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -277,9 +147,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>55863</DevelopmentServerPort>
+          <DevelopmentServerPort>62923</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:55863/</IISUrl>
+          <IISUrl>http://localhost:62923/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

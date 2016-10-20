@@ -19,7 +19,7 @@ namespace DAL
 
         public ConexionDb()
         {
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["AlmacenDb"].ConnectionString));//"Data Source = ROOT - PC\\SURPUSER; Initial Catalog = HandlingQuotasDb; Integrated Security = True";
+            con = new SqlConnection(ConfigurationManager.ConnectionStrings["AlmacenDb"].ConnectionString);//"Data Source = ROOT - PC\\SURPUSER; Initial Catalog = HandlingQuotasDb; Integrated Security = True";
             Cmd = new SqlCommand();
         }
         
