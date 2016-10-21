@@ -109,6 +109,11 @@
             </div>--%>
 
                                 <%--<button type="submit" class="btn btn-xl" id="NewButton">Nuevo</button>--%>
+                                <div>
+                                    <asp:FileUpload ID="FileUpload1" runat="server" />
+
+                                </div>
+                                
                                 <asp:Button ID="NewButton" class="btn btn-warning" runat="server" Text="Nuevo" Height="39px" Width="104px" OnClick="NewButton_Click" />
                                 
                             &nbsp;&nbsp;&nbsp;

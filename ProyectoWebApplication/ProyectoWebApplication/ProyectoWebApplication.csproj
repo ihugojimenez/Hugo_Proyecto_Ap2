@@ -123,6 +123,7 @@
     <Content Include="css\agency.css" />
     <Content Include="css\agency.min.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Imagenes\descarga.jpg" />
     <Content Include="Imagenes\fondo.png" />
     <Content Include="img\about\1.jpg" />
     <Content Include="img\about\2.jpg" />
@@ -308,6 +309,10 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{A0609844-0F6F-474C-BF57-4ACB6E42042B}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{1BD231AD-58CF-4268-A60C-8FD26A284D2D}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

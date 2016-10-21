@@ -1,7 +1,9 @@
 ﻿using BLL;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -24,17 +26,29 @@ namespace ProyectoWebApplication.Consultas
             }
         }
 
-        
 
-        
+        private DataSet GetData()
+        {
+            int id = 0;
+            int.TryParse(IdTextBox.Text, out id);
+            string Cs = ConfigurationManager.ConnectionStrings["AlmacenDb"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(Cs))
+            {
+                SqlDataAdapter da = new SqlDataAdapter("Select * from Usuarios where Usuarioid=" + id, con);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+        }
+
 
         protected void SearchButton_Click1(object sender, EventArgs e)
         {
-            Usuarios u = new Usuarios();
-            DataSet d = new DataSet();
-            d = u.GetData(5);
-            UsersRepeater.DataSource = d;
-            UsersRepeater.DataBind();
+            
+            DataSet ds = GetData();
+
+            Repeater1.DataSource = ds;
+            Repeater1.DataBind();
         }
 
         protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)

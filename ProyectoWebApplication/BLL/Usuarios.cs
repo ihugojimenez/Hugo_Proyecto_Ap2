@@ -12,11 +12,12 @@ namespace BLL
     public class Usuarios : ClaseMaestra
     {
         ConexionDb Conexion = new ConexionDb();
-        public int Usuarioid { get; set; }
+        public int UsuarioId { get; set; }
         public string NombreUsuario { get; set; }
         public string Contraseña { get; set; }
         public string Nombres { get; set; }
         public int IdTipo { get; set; }
+        public string Imagen { get; set; }
 
         public override bool Buscar(int IdBuscado)
         {
@@ -25,7 +26,7 @@ namespace BLL
             dt = Conexion.ObtenerDatos(string.Format("Select * from Usuarios where Usuarioid = " + IdBuscado));
             if (dt.Rows.Count > 0)
             {
-                this.Usuarioid = IdBuscado;
+                this.UsuarioId = IdBuscado;
                 this.NombreUsuario = dt.Rows[0]["NombreUsuario"].ToString();
                 this.Contraseña = dt.Rows[0]["Contraseña"].ToString();
                 this.Nombres = dt.Rows[0]["Nombres"].ToString();
@@ -46,7 +47,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                retorno = conexion.Ejecutar(string.Format("delete from Usuarios where UsuarioId= {0} ", this.Usuarioid));
+                retorno = conexion.Ejecutar(string.Format("delete from Usuarios where UsuarioId= {0} ", this.UsuarioId));
             }
             catch (Exception ex)
             {
@@ -62,7 +63,7 @@ namespace BLL
 
             try
             {
-                retorno = Conexion.Ejecutar(string.Format("Insert into Usuarios(NombreUsuario, Contraseña, Nombres, IdTipo) values('{0}', '{1}','{2}', {3})", this.NombreUsuario, this.Contraseña, this.Nombres, this.IdTipo));
+                retorno = Conexion.Ejecutar(string.Format("Insert into Usuarios(NombreUsuario, Contraseña, Nombres, IdTipo, Imagen) values('{0}', '{1}','{2}', {3}, '{4}')", this.NombreUsuario, this.Contraseña, this.Nombres, this.IdTipo, this.Imagen));
             }
             catch(Exception ex)
             {

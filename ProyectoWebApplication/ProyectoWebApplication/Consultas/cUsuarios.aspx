@@ -33,6 +33,29 @@
     .auto-style6 {
         width: 394px;
     }
+        .auto-style7 {
+            width: 26px;
+            height: 109px;
+        }
+        .auto-style8 {
+            width: 217px;
+            height: 109px;
+        }
+        .auto-style9 {
+            height: 109px;
+        }
+        .auto-style10 {
+            width: 66px;
+            height: 109px;
+        }
+        .auto-style11 {
+            width: 161px;
+            height: 109px;
+        }
+        .auto-style12 {
+            width: 394px;
+            height: 109px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -172,18 +195,18 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style4">&nbsp;</td>
-            <td class="auto-style6">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style7"></td>
+            <td class="auto-style8"></td>
+            <td class="auto-style9"></td>
+            <td class="auto-style10"></td>
+            <td class="auto-style11"></td>
+            <td class="auto-style12"></td>
+            <td class="auto-style9"></td>
+            <td class="auto-style9"></td>
+            <td class="auto-style9"></td>
+            <td class="auto-style9"></td>
+            <td class="auto-style9"></td>
+            <td class="auto-style9"></td>
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
@@ -205,7 +228,52 @@
                     <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                 </asp:GridView>
             </td>
-            <td class="auto-style6">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Repeater ID="UsersRepeater" runat="server" OnItemCommand="Repeater1_ItemCommand">
+            <td class="auto-style6">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Repeater ID="Repeater1" runat="server">
+
+
+                 <ItemTemplate>
+    <table style="border:1px solid #A55129;background-color:#ccc">
+                                        <tr>
+                                            <td style="width: 200px">
+                                            <asp:Image ID="imgEmployee" ImageUrl='<%# Eval("Imagen")%>' runat="server" />
+
+                                            </td>
+                                            
+                                            <td style="width: 200px">
+
+                                                                                
+                                           <table>
+                                                   <tr>
+                                                       <td>
+                                                           <b>ID: </b>
+                                                       </td>
+                                                       <td>
+                                                           <asp:Label ID="lblId" runat="server" Text='<%#Eval("Usuarioid") %>'></asp:Label>
+                                                       </td>
+                                                   </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <b>Username</b>
+                                                        </td>
+                                                        <td>
+                                                            <asp:Label ID="lblName" runat="server" Text='<%#Eval("NombreUsuario") %>'></asp:Label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <b>Names: </b>
+                                                        </td>
+                                                        <td>
+                                                            <asp:Label ID="Label2" runat="server" Text='<%#Eval("Nombres") %>'></asp:Label>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+
+                                            </td>
+                                        </tr>
+
+                                </ItemTemplate>
+
                 </asp:Repeater>
             </td>
             <td>&nbsp;</td>
@@ -218,10 +286,11 @@
         <tr>
             <td class="auto-style1">&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:Button ID="PrintButton" CssClass="btn btn-primary" runat="server" Text="Imprimir" OnClick="PrintButton_Click" />
+                </td>
             <td class="auto-style3">&nbsp;</td>
             <td class="auto-style4">
-                <asp:Button ID="PrintButton" CssClass="btn btn-primary" runat="server" Text="Imprimir" OnClick="PrintButton_Click" />
                 <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
             </td>
             <td class="auto-style6">&nbsp;</td>
