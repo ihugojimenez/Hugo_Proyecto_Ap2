@@ -26,7 +26,7 @@ namespace ProyectoWebApplication.Consultas
             reportViewergenerico.LocalReport.DataSources.Clear();
             reportViewergenerico.ProcessingMode = ProcessingMode.Local;
 
-            reportViewergenerico.LocalReport.ReportPath = @"Reportes\UsersReport.rdlc";
+            reportViewergenerico.LocalReport.ReportPath = @"Reportes\EquiposReport.rdlc";
 
             ReportDataSource source = new ReportDataSource("Equipos", eq.Listadodts("1=1"));
             reportViewergenerico.LocalReport.DataSources.Add(source);

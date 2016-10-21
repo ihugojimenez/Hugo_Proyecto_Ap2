@@ -25,5 +25,11 @@ namespace ProyectoWebApplication.Consultas
         {
 
         }
+
+        protected void PrintButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Consultas/ReporteEquipos.aspx");
+            Response.Clear();
+        }
     }
 }
