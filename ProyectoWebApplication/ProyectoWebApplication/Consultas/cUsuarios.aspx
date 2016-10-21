@@ -11,28 +11,28 @@
             width: 66px
         }
         .auto-style4 {
-            width: 161px;
-        }
-        .auto-style5 {
-            display: block;
-            padding: 6px 12px;
-            font-size: 14px;
-            line-height: 1.42857143;
-            color: #555;
-            background-color: #fff;
-            background-image: none;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-            -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-            -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-            transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-            margin-right: 0;
-        }
-        .auto-style6 {
-            width: 394px;
-        }
+        width: 161px;
+    }
+    .auto-style5 {
+        display: block;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        margin-right: 0;
+    }
+    .auto-style6 {
+        width: 394px;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -162,7 +162,7 @@
                 <asp:TextBox ID="IdTextBox" CssClass="auto-style5" runat="server" Width="131px"></asp:TextBox>
             </td>
             <td class="auto-style6">
-                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Button ID="SearchButton" CssClass="btn btn-info" runat="server" Text="Button" OnClick="SearchButton_Click1" />
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Button ID="SearchButton" CssClass="btn btn-info" runat="server" Text="Buscar" OnClick="SearchButton_Click1" />
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -205,13 +205,12 @@
                     <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                 </asp:GridView>
             </td>
-            <td class="auto-style6">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>
-                <asp:Repeater ID="UsersRepeater" runat="server" OnItemCommand="Repeater1_ItemCommand">
+            <td class="auto-style6">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Repeater ID="UsersRepeater" runat="server" OnItemCommand="Repeater1_ItemCommand">
                 </asp:Repeater>
             </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -221,7 +220,10 @@
             <td class="auto-style2">&nbsp;</td>
             <td>&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style4">&nbsp;</td>
+            <td class="auto-style4">
+                <asp:Button ID="PrintButton" CssClass="btn btn-primary" runat="server" Text="Imprimir" OnClick="PrintButton_Click" />
+                <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
+            </td>
             <td class="auto-style6">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>

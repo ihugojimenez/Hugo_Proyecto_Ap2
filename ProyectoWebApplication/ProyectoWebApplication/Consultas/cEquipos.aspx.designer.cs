@@ -10,7 +10,7 @@
 namespace ProyectoWebApplication.Consultas {
     
     
-    public partial class cUsuarios {
+    public partial class cEquipos {
         
         /// <summary>
         /// Label1 control.
@@ -40,22 +40,13 @@ namespace ProyectoWebApplication.Consultas {
         protected global::System.Web.UI.WebControls.Button SearchButton;
         
         /// <summary>
-        /// UsuariosGridView control.
+        /// EquiposGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView UsuariosGridView;
-        
-        /// <summary>
-        /// UsersRepeater control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater UsersRepeater;
+        protected global::System.Web.UI.WebControls.GridView EquiposGridView;
         
         /// <summary>
         /// PrintButton control.

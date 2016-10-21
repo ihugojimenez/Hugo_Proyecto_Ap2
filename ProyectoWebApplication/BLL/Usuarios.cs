@@ -1,7 +1,9 @@
 ﻿using DAL;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
@@ -78,6 +80,26 @@ namespace BLL
             if (!Orden.Equals(""))
                 ordenFinal = " order by  " + Orden;
             return conexion.ObtenerDatos(string.Format("select " + Campos + " from Usuarios where " + Condicion + ordenFinal));
+        }
+
+        public  DataTable Listadodts(string Condicion)
+        {
+            ConexionDb conexion = new ConexionDb();
+            
+            return conexion.ObtenerDatos(string.Format("select *" + " from Usuarios where " + Condicion));
+        }
+
+        public DataSet GetData(int id)
+        {
+            
+            string Cs = ConfigurationManager.ConnectionStrings["AlmacenDb"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(Cs))
+            {
+                SqlDataAdapter da = new SqlDataAdapter("Select * from Usuarios where Usuarioid=" + id, con);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
         }
     }
 }

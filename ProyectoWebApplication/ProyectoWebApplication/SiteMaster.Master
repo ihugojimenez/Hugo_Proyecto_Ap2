@@ -60,6 +60,9 @@
                         <a class ="page-scroll" href="/Registros/RegistroUsuarios.aspx">Usuarios</a>
                     </li>
                     <li>
+                        <a class ="page-scroll" href="/Consultas/cUsuarios.aspx">Consultas</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#services">Services</a>
                     </li>
                     <li>

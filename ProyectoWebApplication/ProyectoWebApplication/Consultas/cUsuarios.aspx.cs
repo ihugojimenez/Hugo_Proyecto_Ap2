@@ -16,10 +16,7 @@ namespace ProyectoWebApplication.Consultas
             Usuarios u = new Usuarios();
             if(!IsPostBack)
             {
-                //DataSet d = new DataSet();
-                //d = u.Listado();
-                UsersRepeater.DataSource = u.Listado("*", "1=1", "");
-                UsersRepeater.DataBind();
+                
 
 
                 UsuariosGridView.DataSource = u.Listado("*", "1=1", "");
@@ -33,12 +30,22 @@ namespace ProyectoWebApplication.Consultas
 
         protected void SearchButton_Click1(object sender, EventArgs e)
         {
-
+            Usuarios u = new Usuarios();
+            DataSet d = new DataSet();
+            d = u.GetData(5);
+            UsersRepeater.DataSource = d;
+            UsersRepeater.DataBind();
         }
 
         protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
 
+        }
+
+        protected void PrintButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Consultas/ReporteUsuarios.aspx");
+            Response.Clear();
         }
     }
 }

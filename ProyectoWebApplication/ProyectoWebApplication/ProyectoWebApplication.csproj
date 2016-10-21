@@ -116,7 +116,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Consultas\cEquipos.aspx" />
     <Content Include="Consultas\cUsuarios.aspx" />
+    <Content Include="Consultas\ReporteEquipos.aspx" />
     <Content Include="Consultas\ReporteUsuarios.aspx" />
     <Content Include="css\agency.css" />
     <Content Include="css\agency.min.css" />
@@ -175,12 +177,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AlmacenBancasDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\cEquipos.aspx.cs">
+      <DependentUpon>cEquipos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cEquipos.aspx.designer.cs">
+      <DependentUpon>cEquipos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\cUsuarios.aspx.cs">
       <DependentUpon>cUsuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Consultas\cUsuarios.aspx.designer.cs">
       <DependentUpon>cUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ReporteEquipos.aspx.cs">
+      <DependentUpon>ReporteEquipos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\ReporteEquipos.aspx.designer.cs">
+      <DependentUpon>ReporteEquipos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Consultas\ReporteUsuarios.aspx.cs">
       <DependentUpon>ReporteUsuarios.aspx</DependentUpon>
@@ -295,6 +311,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reportes\EquiposReport.rdlc" />
     <EmbeddedResource Include="Reportes\UsersReport.rdlc" />
   </ItemGroup>
   <PropertyGroup>
