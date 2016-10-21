@@ -25,6 +25,7 @@ namespace ProyectoWebApplication
 
         protected void Limpiar()
         {
+            IdTextBox.Text = "";
             UserNameTextBox.Text = "";
             NameTextBox.Text = "";
             PassTextBox.Text = "";
@@ -51,7 +52,7 @@ namespace ProyectoWebApplication
             UserNameTextBox.Text = u.NombreUsuario;
             PassTextBox.Text = u.Contraseña;
             RpassTextBox.Text = u.Contraseña;
-            TipoDropDownList.SelectedIndex = u.IdTipo;
+            //TipoDropDownList.SelectedIndex = u.IdTipo;
         }
 
         protected void SaveButton_Click(object sender, EventArgs e)
@@ -66,8 +67,11 @@ namespace ProyectoWebApplication
         {
             Usuarios usuario = new Usuarios();
             usuario.Usuarioid = Convert.ToInt32(IdTextBox.Text);
-            usuario.Eliminar();
-            Limpiar();
+            if(usuario.Eliminar())
+            {
+                Response.Write("<script>alert('Eliminado con exito')</script>");
+            }
+            //Limpiar();
         }
 
         protected void SearchButton_Click(object sender, EventArgs e)

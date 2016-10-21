@@ -7,11 +7,11 @@
     <br/>
     <div class="row">
                 <div class="col-lg-12 text-center">
-<rsweb:ReportViewer ID="UsuariosReportViewer" runat="server" Width="501px">                    
+<rsweb:ReportViewer ID="UsuariosReportViewer" runat="server" Width="501px">   </rsweb:ReportViewer>                  
                 </div>
             </div>
     
-    </rsweb:ReportViewer>
+   
     <br/>
     <br />
 
