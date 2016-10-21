@@ -136,7 +136,7 @@
                 </asp:ScriptManager>
             </td>
             <td class="auto-style1">
-                <rsweb:ReportViewer ID="EquiposReportViewer" runat="server" CssClass="auto-style3" Width="808px" Font-Names="Verdana" Font-Size="8pt" Height="668px" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt">
+                <rsweb:ReportViewer ID="EquiposReportViewer" runat="server" CssClass="auto-style3" Width="808px" Font-Names="Verdana" Font-Size="8pt" Height="990px" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt">
                     <LocalReport ReportPath="Reportes\EquiposReport.rdlc">
                     </LocalReport>
                 </rsweb:ReportViewer>
